@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment</title>
+	<!-- <meta name="viewport"  content="width=device-width,intial-scale=1"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	
+ <style type="text/css">
+		#navi
+		{
+			list-style-type: none;
+			padding-left:28%;
+			margin: 0;
+			background-color:#708090;
+			overflow: hidden;
+		}
+		#list
+		{
+			float: left;
+		}
+
+		li a:hover
+		{
+			color: white;
+			background-color: green;
+		}
+		li a
+		{
+			display: block;
+			color: white;
+			padding: 15px 30px;
+			text-decoration-line: none;
+			overflow: hidden;
+		}
+		body{
+			margin: 0px 0px;
+			background-color:  #f2f2f2;
+		}
+		#question{
+			background-color: white;
+			display: inline-block;
+			padding: 20px;
+		}
+		#box{
+			background-color: white;
+			display: inline-block;
+            max-width: 45%;
+			
+		}
+		.active
+		{
+			background-color: green;
+		}
+		#mytext
+		{
+			height: 30px;
+			/*width: 90%;*/
+			margin-left: -1px;
+			background-color:	#F8F8F8	;
+			width: 98.5%;
+			padding-left: 9px;
+		}
+        
+		#taskentry
+		{
+			display: inline-block;
+			width: 100%;
+			padding-bottom: 30px;
+
+		}
+		.dli
+		{
+			width: 102.5%;
+			min-height: 30px;
+			/*border: 0.1px solid black;*/
+			padding: 10px;
+			margin-left: -40px;
+            word-break: break-all;
+            display:inline-block;
+            border-top: 0.02px #f1f1f1;
+            border-bottom:  0.02px solid #f1f1f1;
+		}
+        .dli:hover
+        {
+            transition: 0.3s;
+            box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+		.dli:nth-child(odd) {
+		    background-color:   white;
+		}
+		.dli:nth-child(even) {
+		    background-color:   white;
+		}
+		img
+		{
+			float: right;
+			padding:5px;
+		}
+		#arrow:hover
+        {
+            transition: 0.3s;
+            box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #date{
+    	    font-size: 25px;
+    	    font-family: sans-serif;
+    	    color: #3c444c;
+        }
+</style>
+</head>
+<body>
+	<label>
+		<!-- navigation list -->
+	  <ul id="navi">
+		  <li id="list"><a href="" class="active">MY TASK</a></li>
+		  <li id="list"><a href="">FOCUS MODE</a></li>
+		  <li id="list"><a href="">HISTORY</a></li>
+		  <li id="list"><a href="">SETTING</a></li>
+		  <li id="list" style="float: right;"><a href="">LOGIN</a></li>
+	  </ul>
+	</label>
+
+<center><table>
+			<td><i id="arrow" class="fa fa-arrow-circle-o-left" style="font-size:36px" onclick="previous()"></i></td>
+	        <td><h1><center><p id="date" ></p></center></h1></td>
+	        <td><i id="arrow" class="fa fa-arrow-circle-o-right" style="font-size:36px" onclick="nextDate()"></i></td>
+</table></center>
+
+<!--calling date function-->
+<script type="text/javascript" src="date.js"></script> 
+<center>
+   <div  id="box">
+        <div id="question">
+            <h1 style="font-family: Arial; font-size: 21px; color:#3c444c">What are your five most important items to do today?</h1>
+        </div>
+            <div id="taskentry">
+                <ul id="taskUL" style="text-align:left; list-style-type: none; font-family: Arial; font-size:16px"></ul>	
+                <input type="text" style="outline: none;border: none;" id="mytext" placeholder="only five more tasks are allowed"; onKeydown="Javascript: if (event.keyCode==13) addtasks()" autofocus="autofocus">
+                <!-- <span><button onclick="addelement()">+<br></button></span> -->
+            </div>
+    </div>
+</center>
+<!-- calling inputvalue and text script.... -->
+<script type="text/javascript" src="java.js"></script>
+		
+</body>
+</html>
